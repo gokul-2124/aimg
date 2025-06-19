@@ -11,14 +11,11 @@ const app = express()
 
 
 app.use(express.json())
-app.use(cors(
-    {
-        origin: ["https://aimg-client.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST"]
+}));
 
-));
 await connectDB()
 
 app.use('/api/user', userRouter)
