@@ -7,7 +7,9 @@ const connectDB = async () => {
     )
 
 
-    await mongoose.connect(`${process.env.MONGODB_URI}/AIMG`)
+    await mongoose.connect(`${process.env.MONGODB_URI}`, {
+        dbName: "AIMG",
+    })
 }
 
 export default connectDB;
