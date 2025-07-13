@@ -12,7 +12,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-  origin: ["https://aimg-client.vercel.app","http://localhost:5173"]  ,
+  origin: ["https://aimg-pi.vercel.app","http://localhost:5173"]  ,
   credentials: true,
   methods: ["GET", "POST", "OPTIONS"]
 }));
